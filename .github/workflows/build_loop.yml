@@ -29,9 +29,9 @@ jobs:
         with:
           submodules: recursive
 
-      # Customize Loop: Download and apply patches
-      - name: Customize Loop
-        run: 
+        # Customize Loop: Download and apply patches
+        - name: Customize Loop
+          run: 
         
           /bin/bash -c "$(curl -fsSL \
           https://raw.githubusercontent.com/loopandlearn/lnl-scripts/main/CustomizationSelect.sh)" \
