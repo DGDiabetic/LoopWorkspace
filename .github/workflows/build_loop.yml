@@ -50,19 +50,14 @@ jobs:
           algorithm_experiments \
           testflight_expiration_warning
 
-          # the final customization listed above CANNOT have a continuation character "\"
-          # more customizations can be pasted after this line
-
-      # Customize Loop: Download and apply patches
+# Customize Loop: Download and apply patches
       - name: Customize Loop
         run: |
 
-          # For each patch, edit comment line (keep the #) then update curl (and remove the #)
-
-          # DGDiabetic/Loop: LoopCoreConstants.swift: FAST 30to45mins
+          # Loop: LoopCoreConstants.swift: FAST 30to45mins
           curl https://github.com/DGDiabetic/Loop/commit/913cb0aab02e062e426d15e9735180a3395adb96.patch | git apply -v --directory=Loop
 
-          # DGDiabetic/Loop: LoopConstants.swift: AutomaticDosingIncreasedFrom40to60%
+          # Loop: LoopConstants.swift: AutomaticDosingIncreasedFrom40to60%
           curl https://github.com/DGDiabetic/Loop/commit/d36ace3e4a4a71c93180c22b770ec01749ee6377.patch | git apply -v --directory=Loop
           
       # Patch Fastlane Match to not print tables
