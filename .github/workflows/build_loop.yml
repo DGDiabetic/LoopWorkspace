@@ -47,9 +47,9 @@ jobs:
           algorithm_experiments \
           testflight_expiration_warning
 
-      # Customize Loop: Download and apply patches
-      - name: Customize Loop
-        run: 
+          # Customize Loop: Download and apply patches
+          - name: Customize Loop
+          run: 
 
           # Loop: LoopCoreConstants.swift: FAST 30to45mins
           curl https://github.com/DGDiabetic/Loop/commit/913cb0aab02e062e426d15e9735180a3395adb96.patch | git apply -v --directory=Loop
