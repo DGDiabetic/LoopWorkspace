@@ -31,11 +31,8 @@ jobs:
 
       # Customize Loop: Download and apply patches
       - name: Customize Loop
-        run: | 
-
-          # The lines below add the customizations listed using the CustomizationSelect script
-          # The "\" is a continuation character 
-          #   the line following a "\" cannot be blank - that causes the Action to never complete
+        run: 
+        
           /bin/bash -c "$(curl -fsSL \
           https://raw.githubusercontent.com/loopandlearn/lnl-scripts/main/CustomizationSelect.sh)" \
           omnipod_cage \
@@ -52,7 +49,7 @@ jobs:
 
       # Customize Loop: Download and apply patches
       - name: Customize Loop
-        run: |
+        run: 
 
           # Loop: LoopCoreConstants.swift: FAST 30to45mins
           curl https://github.com/DGDiabetic/Loop/commit/913cb0aab02e062e426d15e9735180a3395adb96.patch | git apply -v --directory=Loop
