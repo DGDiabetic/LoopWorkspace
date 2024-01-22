@@ -52,10 +52,10 @@ jobs:
         run: 
 
       # Loop: LoopCoreConstants: FAST 30to45mins
-        curl https://github.com/DGDiabetic/Loop/commit/913cb0aab02e062e426d15e9735180a3395adb96.patch | git apply -v --directory=Loop
+       curl https://github.com/DGDiabetic/Loop/commit/913cb0aab02e062e426d15e9735180a3395adb96.patch | git apply -v --directory=Loop
 
       # Loop: LoopConstants: AutomaticDosingIncreasedFrom40to60%
-        curl https://github.com/DGDiabetic/Loop/commit/d36ace3e4a4a71c93180c22b770ec01749ee6377.patch | git apply -v --directory=Loop
+       curl https://github.com/DGDiabetic/Loop/commit/d36ace3e4a4a71c93180c22b770ec01749ee6377.patch | git apply -v --directory=Loop
           
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
