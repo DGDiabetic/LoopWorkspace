@@ -29,9 +29,9 @@ jobs:
         with:
           submodules: recursive
 
-        # Customize Loop: Download and apply patches
-        - name: Customize Loop
-          run: 
+      # Customize Loop: Download and apply patches
+      - name: Customize Loop
+        run: 
         
           /bin/bash -c "$(curl -fsSL \
           https://raw.githubusercontent.com/loopandlearn/lnl-scripts/main/CustomizationSelect.sh)" \
@@ -47,15 +47,15 @@ jobs:
           algorithm_experiments \
           testflight_expiration_warning
 
-          # Customize Loop: Download and apply patches
-          - name: Customize Loop
-          run: 
+      # Customize Loop: Download and apply patches
+      - name: Customize Loop
+        run: 
 
-          # Loop: LoopCoreConstants.swift: FAST 30to45mins
-          curl https://github.com/DGDiabetic/Loop/commit/913cb0aab02e062e426d15e9735180a3395adb96.patch | git apply -v --directory=Loop
+      # Loop: LoopCoreConstants.swift: FAST 30to45mins
+        curl https://github.com/DGDiabetic/Loop/commit/913cb0aab02e062e426d15e9735180a3395adb96.patch | git apply -v --directory=Loop
 
-          # Loop: LoopConstants.swift: AutomaticDosingIncreasedFrom40to60%
-          curl https://github.com/DGDiabetic/Loop/commit/d36ace3e4a4a71c93180c22b770ec01749ee6377.patch | git apply -v --directory=Loop
+      # Loop: LoopConstants.swift: AutomaticDosingIncreasedFrom40to60%
+        curl https://github.com/DGDiabetic/Loop/commit/d36ace3e4a4a71c93180c22b770ec01749ee6377.patch | git apply -v --directory=Loop
           
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
